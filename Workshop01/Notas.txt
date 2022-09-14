@@ -1,0 +1,47 @@
+INSTRUCCIONES:
+
+
+
+Anfitrion con Windows:
+A nivel del BIOS para la maquina tener activo la virtualizacion.
+Desactivar secure boot en el bios.
+
+
+Notas Virtual Box:
+Hacer folder de maquinas virtuales (VMS).
+Ingresar a host network manager(Solo si hay conflicto), asignarle la ip.
+
+
+Notas Vagrant:
+Todo se maneja por consola.
+Usuario: Variant
+Ctrl + shift + V
+
+
+Notas generales:
+Hacer una carpeta e hacer otra carpeta de las maquinas virtuales.
+Nombrar equipos con personajes, nombre de plantas etc, o usar hash por motivos de seguridad.
+Nombrar carpeta como webserver -> seguidamente en consola se le da vagrant init debian/bullseye64
+Es mas conveniente darle una red ip privada.
+Asignarle la ip que se quiera 192.168.74.12
+c:\Windows\System32\drivers\etc\host registrar un dns, convertirla como un dominio.
+hacer un vagrant up
+pki (investigar)
+
+Dos formas de ingresar, cargando la llave!
+O que la maquina contenga un agente SSH con su llave privada,
+no va a necesitar de una constrasena.
+
+Los alias estan en .bashrc, descomentar el alias. 
+Seguidamente guardar y cerrar sesion y luego volver a ingresar.
+
+Actualizar la lista de paquetes disponibles
+apt -get update -> comando
+
+Para instalar paquetes es con el comando:
+sudo apt -get install vim vim-nox curl git apache mariadb-server mariabdb-client php7.4 
+php7.4-bcmath php7.4-curl php7.4-json php7.4-mbstring php7.4-mysql php7.4-xml
+
+
+UNIX: 
+sudo vim /etc/hosts

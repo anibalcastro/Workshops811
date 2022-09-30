@@ -22,3 +22,7 @@
 el comando es: ```mkdir -p ~/sites/lfts.isw811.xyz/public```
 7) Agregamos lo que deseamos que salga en nuestro sitio web en mi caso agregare un <strong>Hola mundo!</strong>
 el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/public/index.html ```
+8) Agregaremos un parametro (ServerName) a la configuracion de Apache: ``` echo "ServerName webserver" | sudo tee -a /etc/apache2/apache2.conf ```
+9) Se hace una comprobacion para ver si no hay errores de sintaxis: ``` sudo apache2ctl -t```
+10) Ya nos quedaria nada mas habilitar el sitio con el siguiente comando: ``` sudo a2ensite lfts.isw811.xyz.conf```
+11) Ultimo paso seria recargar la configuracion de apache: con el comando sugerido ```sudo systemctl reload apache2```

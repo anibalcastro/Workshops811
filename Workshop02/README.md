@@ -20,13 +20,18 @@
 4) Copiaremos el archivo en la carpeta sites-available: ``` sudo cp /vagrant/lfts.isw811.xyz.conf /etc/apache2/sites-available/```
 5) Habilitamos 3 módulos de Apache: ``` sudo a2enmod vhost_alias rewrite ssl```
 6) Crearemos una estructura de carpetas parecido a la siguiente imagen el comando es: ```mkdir -p ~/sites/lfts.isw811.xyz/public```:
-![Alt text](./Images/Estructura.jpg)
+![Estructura](./Images/Estructura.jpg)
 7) Agregamos lo que deseamos que salga en nuestro sitio web en mi caso agregare un <strong>Hola mundo!</strong>
 el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/public/index.html ```
 8) Agregaremos un parametro (ServerName) a la configuracion de Apache: ``` echo "ServerName webserver" | sudo tee -a /etc/apache2/apache2.conf ```
 9) Se hace una comprobacion para ver si no hay errores de sintaxis: ``` sudo apache2ctl -t```
 10) Ya nos quedaria nada mas habilitar el sitio con el siguiente comando: ``` sudo a2ensite lfts.isw811.xyz.conf```
 11) Ultimo paso seria recargar la configuracion de apache: con el comando sugerido ```sudo systemctl reload apache2```
+
+
+## Resultado esperado:
+
+
 
 ----------------------
 ---------------------

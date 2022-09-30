@@ -30,14 +30,14 @@ el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/pub
 
 
 ## Resultado esperado:
-
+Esperamos el <Strong>HOLA MUNDO!</Strong>, como puede observar a su derecha, se logró el objetivo.
+![Estructura](./Images//ResultadoEsperado.jpeg)
 
 
 ----------------------
 ---------------------
 ### Notas importantes:
 <Strong>Consola:</Strong>
-
 * ``` pwd``` -> Es para saber mi ubicación en la consola.
 * ``` ls ``` -> Muestra archivos.
 * ``` tree -a``` -> Muestra archivos ocultos.
@@ -49,6 +49,7 @@ el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/pub
 * ``` Vagrant halt ``` -> Apagar la maquina.
 * ``` Vagrant destroy ``` -> Destruir la maquina.
 * ```ssh-keygen -t rsa ``` -> Comando para crear una llave.
+* ```hostname -I ``` -> Comando para saber la IP que esta utilizando.
 * Se recomienda usar git bash o PowerShellx64.
 ----------
 -----

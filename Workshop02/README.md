@@ -1,6 +1,6 @@
 # Workshop02 - Anibal Castro Ponce - ISW811
 
-### Iniciar maquina LAMP y publicacion de un sitio.
+### Instalar LAMP y publicar un sitio.
 
 ## Creación de la maquina debian con Vagrant:
 1) Crear una carpeta VMs con el comando:  ```$ mkdir VMs ```
@@ -10,3 +10,15 @@
 5) En dado caso que tengan instalado Visual estudio ejecutan ``` $ code Vagrantfile ``` sino utilizan ``` $ notepad Vagrantfile ``` y descomentan la linea numero 35 y se guarda el archivo.
 6) Una vez hecho el paso anterior podemos iniciar la maquina con el comando ```$ vagrant up```
 7) Para iniciar sesión en la maquina virtual se ejecuta el comando ``` $ vagrant ssh ```.
+
+## Instalación de LAMP
+1) Una vez dentro de la maquina virtual bullseye64 tenemos que actualizar la lista de paquetes disponibles. ``` $ sudo apt-get update ```
+2) Instalaremos Vim, Curl, Apache2, MySQL y PHP, el comando es el siguiente: ``` $ sudo apt-get install vim vim-nox curl git apache2 mariadb-server mariadb-client php7.4 php7.4-bcmath php7.4-curl php7.4-json php7.4-mbstring php7.4-mysql php7.4-xml ```
+3) Descargaremos en la carpeta que en mi caso se llama WebServer, es donde se almacena la maquina virtual, descargar el siguiente archivo, para abrirlo ingresar al [LINK](https://drive.google.com/file/d/1Hw8WpoykhUIXzmgkli2vuBCymA9ZzJnB/view?usp=sharing).
+4) Copiaremos el archivo en la carpeta sites-available: ``` sudo cp /vagrant/lfts.isw811.xyz.conf /etc/apache2/sites-available/```
+5) Habilitamos 3 módulos de Apache: ``` sudo a2enmod vhost_alias rewrite ssl```
+6) Crearemos una estructura de carpetas parecido a la siguiente imagen:
+![Alt text](./Images/Estructura.jpg)
+el comando es: ```mkdir -p ~/sites/lfts.isw811.xyz/public```
+7) Agregamos lo que deseamos que salga en nuestro sitio web en mi caso agregare un <strong>Hola mundo!</strong>
+el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/public/index.html ```

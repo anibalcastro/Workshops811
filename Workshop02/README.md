@@ -1,7 +1,9 @@
 # Workshop02 - Anibal Castro Ponce - ISW811
-
-### Instalar LAMP y publicar un sitio.
-
+---
+---
+### <Strong>Instalar LAMP y publicar un sitio.</Strong>
+---
+---
 ## Creación de la maquina debian con Vagrant:
 1) Crear una carpeta VMs con el comando:  ```$ mkdir VMs ```
 2) Crear otra carpeta en donde se instalara la maquina debian/bullseye64 ```$ mkdir WebServer```
@@ -26,3 +28,24 @@ el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/pub
 9) Se hace una comprobacion para ver si no hay errores de sintaxis: ``` sudo apache2ctl -t```
 10) Ya nos quedaria nada mas habilitar el sitio con el siguiente comando: ``` sudo a2ensite lfts.isw811.xyz.conf```
 11) Ultimo paso seria recargar la configuracion de apache: con el comando sugerido ```sudo systemctl reload apache2```
+
+----------------------
+---------------------
+### Notas importantes:
+<Strong>Consola:</Strong>
+
+* ``` pwd``` -> Es para saber mi ubicación en la consola.
+* ``` ls ``` -> Muestra archivos.
+* ``` tree -a``` -> Muestra archivos ocultos.
+* ``` cat ``` -> Se puede mostrar el contenido de un archivo.
+----------
+<Strong>Vagrant:</Strong>
+* ``` Vagrant up ``` -> Encender la maquina.
+* ``` Vagrant ssh ``` -> Ingresar a la maquina virtual.
+* ``` Vagrant halt ``` -> Apagar la maquina.
+* ``` Vagrant destroy ``` -> Destruir la maquina.
+* ```ssh-keygen -t rsa ``` -> Comando para crear una llave.
+* Se recomienda usar git bash o PowerShellx64.
+----------
+-----
+

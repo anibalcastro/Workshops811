@@ -19,9 +19,8 @@
 3) Descargaremos en la carpeta que en mi caso se llama WebServer, es donde se almacena la maquina virtual, descargar el siguiente archivo, para abrirlo ingresar al [LINK](https://drive.google.com/file/d/1Hw8WpoykhUIXzmgkli2vuBCymA9ZzJnB/view?usp=sharing).
 4) Copiaremos el archivo en la carpeta sites-available: ``` sudo cp /vagrant/lfts.isw811.xyz.conf /etc/apache2/sites-available/```
 5) Habilitamos 3 módulos de Apache: ``` sudo a2enmod vhost_alias rewrite ssl```
-6) Crearemos una estructura de carpetas parecido a la siguiente imagen:
+6) Crearemos una estructura de carpetas parecido a la siguiente imagen el comando es: ```mkdir -p ~/sites/lfts.isw811.xyz/public```:
 ![Alt text](./Images/Estructura.jpg)
-el comando es: ```mkdir -p ~/sites/lfts.isw811.xyz/public```
 7) Agregamos lo que deseamos que salga en nuestro sitio web en mi caso agregare un <strong>Hola mundo!</strong>
 el comando es el siguiente: ``` echo "Hola mundo!" > ~/sites/lfts.isw811.xyz/public/index.html ```
 8) Agregaremos un parametro (ServerName) a la configuracion de Apache: ``` echo "ServerName webserver" | sudo tee -a /etc/apache2/apache2.conf ```
